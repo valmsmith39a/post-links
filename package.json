@@ -21,7 +21,11 @@
     "directories": {
       "baseURL": "public"
     },
-    "dependencies": {},
+    "dependencies": {
+      "react": "npm:react@^15.0.1",
+      "react-dom": "npm:react-dom@^15.0.1",
+      "react-router": "npm:react-router@^2.2.2"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
