@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import { getAllPosts } from '../../actions/PostActions';
+import { createPost } from '../../actions/PostActions';
+import Post from './Post';
 
 class DisplayWeblinks extends Component {
   componentWillMount() {
@@ -11,15 +13,39 @@ class DisplayWeblinks extends Component {
     });
   }
 
+  createPost() {
+    const postObj= {
+      text: this.refs.inputText.value
+    }
+    this.props.createPost(postObj)
+    .then(response => {
+      console.log('response in createPost: ', response);
+    });
+  }
+
+  renderPosts() {
+    return(
+      <div>
+        <ul>
+          <Post />
+        </ul>
+      </div>
+    );
+  }
+
   render() {
     return (
-      <div>Hello from DisplayWeblinks</div>
+      <div>Hello from DisplayWeblinks
+        <input ref="inputText" type="text" />
+        <button onClick={this.createPost.bind(this)}>POST</button>
+        { this.renderPosts() }
+      </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return state.userPostsAll;
+  return state.userPosts;
 }
 
-export default connect(mapStateToProps, { getAllPosts })(DisplayWeblinks);
+export default connect(mapStateToProps, { getAllPosts, createPost })(DisplayWeblinks);
