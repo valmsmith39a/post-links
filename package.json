@@ -22,6 +22,7 @@
       "baseURL": "public"
     },
     "dependencies": {
+      "axios": "npm:axios@^0.9.1",
       "react": "npm:react@^15.0.1",
       "react-dom": "npm:react-dom@^15.0.1",
       "react-redux": "npm:react-redux@^4.4.5",

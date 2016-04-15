@@ -1,9 +1,17 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
+import DisplayWeblinks from './DisplayWeblinks';
 
 export default class MainPage extends Component {
+  componentWillMount() {
+
+  }
+
   render() {
     return(
-      <div>Main Page</div>
+      <div>
+        <div>Main Page</div>
+        <DisplayWeblinks />
+      </div>
     );
   }
 }
