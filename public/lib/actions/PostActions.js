@@ -1,13 +1,14 @@
 import axios from 'axios';
 
-export const FETCH_POSTS = 'FETCH_POSTS';
+export const GET_POSTS = 'GET_POSTS';
 
-export function getAllWeblinks() {
-  console.log('in getAllWeblinks()');
+const GET_POSTS_URL = '/weblinks';
+
+export function getAllPosts() {
   const request = axios.get('/weblinks');
 
-  // return {
-  //   type: FETCH_POSTS,
-  //   payload: null
-  // };
+  return {
+    type: GET_POSTS,
+    payload: request
+  };
 }

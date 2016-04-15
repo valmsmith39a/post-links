@@ -1,14 +1,14 @@
 import {
-  FETCH_POSTS
+  GET_POSTS
 } from '../actions/PostActions';
 
-const INITIAL_STATE = { something:null };
+const INITIAL_STATE = { weblinks: [] };
 
 export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
-    case FETCH_POSTS: 
-      return state; 
-    default: 
-      return state; 
+    case GET_POSTS:
+      return { weblinks: action.payload.data };
+    default:
+      return state;
   }
 }

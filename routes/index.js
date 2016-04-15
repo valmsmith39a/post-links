@@ -8,7 +8,8 @@ router.get('/', function(req, res, next) {
 
 /* GET all posts test */
 router.get('/weblinks', function(req, res, next) {
-  res.send('GET all posts TEST: You got a bunch of posts');
+  var testArrOfPosts = ['Post 1', 'Post 2', 'Post 3'];
+  res.send(testArrOfPosts);
 });
 
 module.exports = router;
