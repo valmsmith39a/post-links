@@ -6,13 +6,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* GET TEST  */
 router.get('/weblinks', function(req, res, next) {
   var testArrOfPosts = [{text:'Post 1'}, {text:'Post 2'}, {text:'Post 3'}];
   res.send(testArrOfPosts);
 });
 
-/* POST TEST */
 router.post('/weblinks', function(req, res, next) {
   res.send(req.body);
 })

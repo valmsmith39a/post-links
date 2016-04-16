@@ -11,27 +11,15 @@ class DisplayWeblinks extends Component {
     .then(response => {});
   }
 
-  createPost() {
-    const postObj= {
-      text: this.refs.inputText.value
-    }
-    this.props.createPost(postObj)
-    .then(response => {
-      console.log('response in createPost: ', response);
-    });
-  }
-
   renderPosts() {
     return this.props.posts.map((post, index) => (
       <Post key={index} post={post} />
     ));
   }
-  
+
   render() {
     return (
-      <div>Hello from DisplayWeblinks
-        <input ref="inputText" type="text" />
-        <button onClick={this.createPost.bind(this)}>POST</button>
+      <div>DisplayWeblinks
         <ul>
           { this.renderPosts() }
         </ul>
