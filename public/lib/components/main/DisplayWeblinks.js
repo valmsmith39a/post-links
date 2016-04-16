@@ -9,7 +9,7 @@ class DisplayWeblinks extends Component {
   componentWillMount() {
     this.props.getAllPosts()
     .then(response => {
-      console.log('response from getAllPosts is: ', response);
+      this.render();
     });
   }
 
@@ -24,13 +24,9 @@ class DisplayWeblinks extends Component {
   }
 
   renderPosts() {
-    return(
-      <div>
-        <ul>
-          <Post />
-        </ul>
-      </div>
-    );
+    return this.props.posts.map(post => {
+      return <Post post={post} />
+    });
   }
 
   render() {
@@ -38,7 +34,9 @@ class DisplayWeblinks extends Component {
       <div>Hello from DisplayWeblinks
         <input ref="inputText" type="text" />
         <button onClick={this.createPost.bind(this)}>POST</button>
-        { this.renderPosts() }
+        <ul>
+          { this.renderPosts() }
+        </ul>
       </div>
     );
   }

@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Post = () => (
-    <div>hello from functional component Post</div>
-);
+const Post = ({ post } )  => {
+  return (
+    <li>{post.text}</li>
+  )
+};
+
 export default Post;
