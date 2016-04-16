@@ -13,7 +13,7 @@ class DisplayWeblinks extends Component {
 
   renderPosts() {
     return this.props.userPosts.map((post, index) => (
-      <Post key={index} post={post} />
+      <Post key={index} post={post} index={index} />
     ));
   }
 

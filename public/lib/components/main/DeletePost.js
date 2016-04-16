@@ -12,9 +12,9 @@ import { deletePost } from '../../actions/PostActions';
 
 class DeletePost extends React.Component {
   onClick() {
-    this.props.deletePost()
+    this.props.deletePost(this.props.index)
       .then(response => {
-        console.log('response: ', response);
+        console.log('delete response: ', response);
       });
   }
 
