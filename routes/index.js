@@ -15,4 +15,9 @@ router.post('/weblinks', function(req, res, next) {
   res.send(req.body);
 })
 
+router.delete('/weblinks', function(req, res, next) {
+  console.log('in delete route');
+  res.send('Post Deleted');
+})
+
 module.exports = router;
