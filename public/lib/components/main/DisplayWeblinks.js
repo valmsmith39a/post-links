@@ -8,9 +8,7 @@ import Post from './Post';
 class DisplayWeblinks extends Component {
   componentWillMount() {
     this.props.getAllPosts()
-    .then(response => {
-      this.render();
-    });
+    .then(response => {});
   }
 
   createPost() {
@@ -24,11 +22,11 @@ class DisplayWeblinks extends Component {
   }
 
   renderPosts() {
-    return this.props.posts.map(post => {
-      return <Post post={post} />
-    });
+    return this.props.posts.map((post, index) => (
+      <Post key={index} post={post} />
+    ));
   }
-
+  
   render() {
     return (
       <div>Hello from DisplayWeblinks

@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 /* GET TEST  */
 router.get('/weblinks', function(req, res, next) {
-  var testArrOfPosts = [{text:'Post1'}, {text:'Post 2'}, {text:'Post 3'}];
+  var testArrOfPosts = [{text:'Post 1'}, {text:'Post 2'}, {text:'Post 3'}];
   res.send(testArrOfPosts);
 });
 
