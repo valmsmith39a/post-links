@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Delete from './DeletePost.js'
+import DeletePost from './DeletePost.js'
 const Post = ({ post } )  => {
   return (
     <li>

@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const GET_ALL_POSTS = 'GET_ALL_POSTS';
 export const CREATE_POST = 'CREATE_POST';
+export const DELETE_POST = 'DELETE_POST';
 
 const GET_POSTS_URL = '/weblinks';
 
@@ -19,6 +20,15 @@ export function createPost(post) {
 
   return {
     type: CREATE_POST,
+    payload: request
+  }
+}
+
+export function deletePost(post) {
+  const request = axios.delete('/weblinks', post);
+
+  return {
+    type: DELETE_POST,
     payload: request
   }
 }
