@@ -24,8 +24,8 @@ export function createPost(post) {
   }
 }
 
-export function deletePost(post) {
-  const request = axios.delete('/weblinks', post);
+export function deletePost(index) {
+  const request = axios.delete(`/weblinks/${index}`);
 
   return {
     type: DELETE_POST,

@@ -4,7 +4,7 @@ const Post = ({ post, index } )  => {
   return (
     <li>
       {post.text}
-      <DeletePost index={index}/>
+      <DeletePost index={index} />
     </li>
   );
 };

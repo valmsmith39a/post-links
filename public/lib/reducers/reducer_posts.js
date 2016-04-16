@@ -13,9 +13,8 @@ export default function(state = INITIAL_STATE, action) {
     case GET_ALL_POSTS:
       return action.payload.data;
     case DELETE_POST:
-      //let index = action.payload.data.index;
-      console.log('delete array is: ', [...state.slice(0,1), ...state.slice(2)]);
-      return [...state.slice(0,1), ...state.slice(2)];
+      const index = action.payload.data;
+      return [ ...state.slice(0,index), ...state.slice(index + 1) ];
     default:
       return state;
   }
