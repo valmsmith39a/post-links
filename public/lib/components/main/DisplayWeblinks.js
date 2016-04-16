@@ -12,7 +12,7 @@ class DisplayWeblinks extends Component {
   }
 
   renderPosts() {
-    return this.props.posts.map((post, index) => (
+    return this.props.userPosts.map((post, index) => (
       <Post key={index} post={post} />
     ));
   }
@@ -29,7 +29,7 @@ class DisplayWeblinks extends Component {
 }
 
 function mapStateToProps(state) {
-  return state.userPosts;
+  return state;
 }
 
 export default connect(mapStateToProps, { getAllPosts, createPost })(DisplayWeblinks);
