@@ -15,7 +15,7 @@ class CreatePost extends Component {
     return(
       <div>
         <input ref="inputText" type="text" />
-        <button onClick={this.createPost.bind(this)}>POST</button>
+        <button onClick={this.createPost.bind(this)}>SUBMIT</button>
       </div>
     );
   }

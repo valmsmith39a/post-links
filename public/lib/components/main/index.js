@@ -6,7 +6,6 @@ export default class MainPage extends Component {
   render() {
     return(
       <div>
-        <div>Main Page</div>
         <CreatePost />
         <DisplayWeblinks />
       </div>

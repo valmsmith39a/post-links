@@ -19,7 +19,7 @@ class DisplayWeblinks extends Component {
 
   render() {
     return (
-      <div>DisplayWeblinks
+      <div>
         <ul>
           { this.renderPosts() }
         </ul>
