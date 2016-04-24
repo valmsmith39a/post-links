@@ -4,8 +4,10 @@ import { editPost } from '../../actions/PostActions';
 
 class EditPost extends Component {
   onClick() {
-    console.log('in edit click');
-    this.props.editPost(this.props.index)
+    var testEditPost = {
+      text:"EDITED POST TEST"
+    }
+    this.props.editPost(this.props.index, testEditPost)
      .then(response => {
        console.log('response in edit is: ', response);
      });

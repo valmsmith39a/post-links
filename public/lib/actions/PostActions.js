@@ -34,8 +34,8 @@ export function deletePost(index) {
   }
 }
 
-export function editPost(index) {
-  const request = axios.put(`/weblinks/${index}`);
+export function editPost(index, postObject) {
+  const request = axios.put(`/weblinks/${index}`, postObject);
 
   return {
     type: EDIT_POST,
