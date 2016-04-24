@@ -1,7 +1,8 @@
 import {
   GET_ALL_POSTS,
   CREATE_POST,
-  DELETE_POST
+  DELETE_POST,
+  EDIT_POST 
 } from '../actions/PostActions';
 
 const INITIAL_STATE = [];

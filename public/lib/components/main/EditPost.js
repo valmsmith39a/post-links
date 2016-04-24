@@ -8,7 +8,7 @@ class EditPost extends Component {
     this.props.editPost(this.props.index)
      .then(response => {
        console.log('response in edit is: ', response);
-     })
+     });
   }
 
   render() {

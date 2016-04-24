@@ -19,4 +19,8 @@ router.delete('/weblinks/:index', function(req, res, next) {
   res.send(req.params.index);
 })
 
+router.put('/weblinks/:index', function(req, res, next) {
+  res.send(req.params.index);
+})
+
 module.exports = router;
