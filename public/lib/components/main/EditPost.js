@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class EditPost extends Component {
+  onClick() {
+    console.log('in edit click');
+  }
+  
   render() {
     return (
-      <button>Edit</button>
+      <button onClick={this.onClick.bind(this)}>Edit</button>
     );
   }
 }
